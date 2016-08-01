@@ -17,13 +17,13 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 # 
-# $Id: libnfs.SlackBuild,v 1.2 2016/08/01 13:28:34 gsotirov Exp $
+# $Id: libnfs.SlackBuild,v 1.3 2016/08/01 13:47:21 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=libnfs
-VERSION=1.8.0
+VERSION=1.9.8
 BUILD=${BUILD:-1}
 ARCH=${ARCH:-i486}
 
@@ -63,6 +63,7 @@ CXXFLAGS=$SLKCFLAGS \
             --host=$ARCH-slackware-linux \
             --prefix=/usr \
             --libdir=/usr/lib${LIBDIRSUFFIX} \
+            --mandir=/usr/man \
             --enable-shared=yes \
             --enable-static=no || exit 5
 
@@ -74,6 +75,7 @@ make DESTDIR=$PKG install || exit 7
 bin_perms $PKG
 ( cd $PKG; strip_bin; strip_lib )
 ( cd $SRC; create_docs $PKG $NAME-$VERSION )
+gzip_man $PKG
 
 mkdir -p $PKG/install
 install -m 644 $CWD/slack-desc     $PKG/install/slack-desc
