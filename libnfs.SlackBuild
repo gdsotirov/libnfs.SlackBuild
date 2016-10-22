@@ -17,15 +17,15 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 # 
-# $Id: libnfs.SlackBuild,v 1.4 2016/08/03 06:50:13 gsotirov Exp $
+# $Id: libnfs.SlackBuild,v 1.5 2016/10/22 09:21:44 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=libnfs
-VERSION=1.10.0
+VERSION=1.11.0
+ARCH=${ARCH:-i586}
 BUILD=${BUILD:-1}
-ARCH=${ARCH:-i486}
 
 TMP=${TMP:-/tmp}
 CWD=${CWD:-`pwd`}
