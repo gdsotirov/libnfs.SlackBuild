@@ -5,7 +5,7 @@ libnfs: It offers three different APIs, for different use : RAW, NFS ASYNC and
 libnfs: NFS SYNC.
 libnfs:   Libnfs uses RFC2224 style URLs extended with libnfs specific url
 libnfs: arguments some minor extensions.
-libnfs:   Libnfs is a trully multiplatform library supporting Linux, Cygwin,
+libnfs:   Libnfs is a truly multiplatform library supporting Linux, Cygwin,
 libnfs: MacOSX, iOS, FreeBSD, Solaris, Windows and Android.
 libnfs:
-libnfs: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+libnfs: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
